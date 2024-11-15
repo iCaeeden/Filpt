@@ -15,7 +15,7 @@
 <body>
     <div class="swipe-indicator left">❌</div>
     <div class="swipe-indicator right">💚</div>
-    
+
     <div class="card-container">
 
         <!-- Replace image1.jpg, image2.jpg, etc. with your images -->
@@ -26,6 +26,20 @@
 
     </div>
 
+
+    <script>
+        document.documentElement.requestFullscreen = document.documentElement.requestFullscreen ||
+            document.documentElement.mozRequestFullScreen ||
+            document.documentElement.webkitRequestFullscreen ||
+            document.documentElement.msRequestFullscreen;
+
+        // Request fullscreen when the page is loaded
+        window.onload = () => {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+        };
+    </script>
 
 
 

@@ -80,17 +80,7 @@ if (cards.length > 0) {
     setupCardSwipe(cards[currentIndex]);
 }
 
-document.documentElement.requestFullscreen = document.documentElement.requestFullscreen ||
-    document.documentElement.mozRequestFullScreen ||
-    document.documentElement.webkitRequestFullscreen ||
-    document.documentElement.msRequestFullscreen;
 
-// Request fullscreen when the page is loaded
-window.onload = () => {
-    if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-    }
-};
 
 
 // Set up swipe event listeners for touch and mouse events
