@@ -155,7 +155,7 @@ body {
     /* Add a hover effect to make the icons grow */
     .swipe-indicator:hover {
         transform: translateY(-50%) scale(1.5); /* Increase size on hover */
-        opacity: 0.8; /* Full opacity on hover */
+        opacity: 0.9; /* Full opacity on hover */
     }
 
 /* Media Query for responsiveness */
