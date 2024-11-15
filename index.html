@@ -26,19 +26,26 @@
 
     </div>
 
+    <button id="fullscreenBtn">Go Fullscreen</button>
 
     <script>
-        document.documentElement.requestFullscreen = document.documentElement.requestFullscreen ||
-            document.documentElement.mozRequestFullScreen ||
-            document.documentElement.webkitRequestFullscreen ||
-            document.documentElement.msRequestFullscreen;
+        const fullscreenBtn = document.getElementById("fullscreenBtn");
 
-        // Request fullscreen when the page is loaded
-        window.onload = () => {
+        // Function to request fullscreen
+        function enterFullscreen() {
             if (document.documentElement.requestFullscreen) {
                 document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {  // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {  // Chrome and Safari
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {  // IE/Edge
+                document.documentElement.msRequestFullscreen();
             }
-        };
+        }
+
+        // Listen for a click event to trigger fullscreen
+        fullscreenBtn.addEventListener("click", enterFullscreen);
     </script>
 
 
